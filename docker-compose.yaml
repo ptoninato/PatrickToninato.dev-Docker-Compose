@@ -1,11 +1,20 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  app:
+  api-server:
     build:
-      context: .
+      context: ./api-server
       dockerfile: dockerfile
     volumes:
-      - ./:/usr/src/app
+      - ./api-server:/usr/src/app
     ports:
-      - '3000:3000'
+      - "5000:5000"
+
+  api-client:
+    build:
+      context: ./api-client
+      dockerfile: dockerfile
+    volumes:
+      - ./api-client/:/usr/src/app
+    ports:
+      - "3000:3000"
