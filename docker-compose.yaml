@@ -11,6 +11,8 @@ services:
       - "5000:5000"
 
   api-client:
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     build:
       context: ./api-client
       dockerfile: dockerfile
