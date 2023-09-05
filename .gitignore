@@ -4,3 +4,4 @@ patricktoninato.dev-api-frontend/
 api-server/
 api-client/
 database.env
+.vscode/launch.json
